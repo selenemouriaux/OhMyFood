@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "P3 OpenClassrooms",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selenemouriaux/selenemouriaux.github.io.git"
+  },
+  "author": "S_il_vanas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selenemouriaux/selenemouriaux.github.io/issues"
+  },
+  "homepage": "https://github.com/selenemouriaux/selenemouriaux.github.io#readme"
+}
