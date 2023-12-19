@@ -1,0 +1,33 @@
+@import "variables";
+@import "header";
+@import "footer";
+@import "introduction";
+@import "restaurant";
+@import "thumbnails";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  font-family: $textFont;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 20px 0 10px 0;
+  width: 200px;
+  &-small {
+    width: 100px;
+  }
+}

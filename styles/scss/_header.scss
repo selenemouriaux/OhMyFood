@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $shadowBadge;
+}
+
+.nav {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: black;
+}

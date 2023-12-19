@@ -1,0 +1,35 @@
+@import "_variables";
+
+footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  background-color: $grey;
+  color: $white;
+  gap: 20px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  &-icon {
+    display: inline-block;
+    width: 30px;
+  }
+  &-item {
+    width: calc(100vw - 70px);
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.bold {
+  font-weight: 500;
+}

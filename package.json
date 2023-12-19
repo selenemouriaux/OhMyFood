@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/selenemouriaux/selenemouriaux.github.io/issues"
   },
-  "homepage": "https://github.com/selenemouriaux/selenemouriaux.github.io#readme"
+  "homepage": "https://github.com/selenemouriaux/selenemouriaux.github.io#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "sass": "^1.69.5"
+  }
 }

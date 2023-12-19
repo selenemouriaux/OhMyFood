@@ -1,12 +1,144 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-
-</body>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/c6a24866e1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <title>OhMyFood - Accueil</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img
+          class="logo"
+          src="images/logo/ohmyfood.png"
+          alt="logo Oh My Food"
+        />
+      </header>
+      <main>
+        <section class="Introduction">
+          <div class="Introduction-location">
+            <span class="Introduction-location-icon"
+              ><i class="fas fa-map-marker-alt"></i
+            ></span>
+            <span>Paris, Belleville</span>
+          </div>
+          <div class="Introduction-cta">
+            <p class="Introduction-cta-title">
+              Réservez le menu qui vous convient
+            </p>
+            <p class="Introduction-cta-desc">
+              Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </p>
+            <p class="Introduction-cta-box">
+              <a class="Introduction-cta-box-button" href="#restaurants"
+                >Explorer nos restaurants</a
+              >
+            </p>
+          </div>
+          <div class="Introduction-tutorial">
+            <p class="Introduction-tutorial-title">Fonctionnement</p>
+            <div class="Introduction-tutorial-stepCard StepCard">
+              <div class="StepCard-number">1</div>
+              <div class="StepCard-icon"><i class="fas fa-mobile-alt"></i></div>
+              <div class="StepCard-step">Choisissez un restaurant</div>
+            </div>
+            <div class="Introduction-tutorial-stepCard StepCard">
+              <div class="StepCard-number">2</div>
+              <div class="StepCard-icon"><i class="fas fa-list-ul"></i></div>
+              <div class="StepCard-step">Composez votre menu</div>
+            </div>
+            <div class="Introduction-tutorial-stepCard StepCard">
+              <div class="StepCard-number">3</div>
+              <div class="StepCard-icon"><i class="fas fa-store"></i></div>
+              <div class="StepCard-step">Dégustez au restaurant</div>
+            </div>
+          </div>
+        </section>
+        <section id="restaurants" class="restaurantsList">
+          <p class="restaurantsList-title"></p>
+          <div class="restaurantsList-resto">
+            <div class="restaurantsList-resto-image CardImage">
+              <img class="CardImage-image" src="" alt="" />
+              <div class="CardImage-sticker"></div>
+            </div>
+            <div class="restaurantsList-resto-info CardInfo">
+              <div class="CardInfo">
+                <span class="CardInfo-title"></span>
+                <span class="CardInfo-location"></span>
+              </div>
+              <div class="Like"></div>
+            </div>
+          </div>
+          <div class="restaurantsList-resto">
+            <div class="restaurantsList-resto-image CardImage">
+              <img class="CardImage-image" src="" alt="" />
+              <div class="CardImage-sticker"></div>
+            </div>
+            <div class="restaurantsList-resto-info CardInfo">
+              <div class="CardInfo">
+                <span class="CardInfo-title"></span>
+                <span class="CardInfo-location"></span>
+              </div>
+              <div class="Like"></div>
+            </div>
+          </div>
+          <div class="restaurantsList-resto">
+            <div class="restaurantsList-resto-image CardImage">
+              <img class="CardImage-image" src="" alt="" />
+              <div class="CardImage-sticker"></div>
+            </div>
+            <div class="restaurantsList-resto-info CardInfo">
+              <div class="CardInfo">
+                <span class="CardInfo-title"></span>
+                <span class="CardInfo-location"></span>
+              </div>
+              <div class="Like"></div>
+            </div>
+          </div>
+          <div class="restaurantsList-resto">
+            <div class="restaurantsList-resto-image CardImage">
+              <img class="CardImage-image" src="" alt="" />
+              <div class="CardImage-sticker"></div>
+            </div>
+            <div class="restaurantsList-resto-info CardInfo">
+              <div class="CardInfo">
+                <span class="CardInfo-title"></span>
+                <span class="CardInfo-location"></span>
+              </div>
+              <div class="Like"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <img
+          class="logo-small"
+          src="images/logo/ohmyfood@2x.svg"
+          alt="logo Oh My Food"
+        />
+        <div class="footer-list">
+          <span class="footer-list-icon"><i class="fas fa-utensils"></i></span>
+          <span class="footer-list-item bold">Proposer un restaurant</span>
+          <span class="footer-list-icon"
+            ><i class="fas fa-hands-helping"></i
+          ></span>
+          <span class="footer-list-item bold">Devenir partenaire</span>
+          <span class="footer-list-item">Mentions légales</span>
+          <span class="footer-list-item">Contact</span>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

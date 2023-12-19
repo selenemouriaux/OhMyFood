@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: black;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  gap: 20px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+}
+.footer-list-icon {
+  display: inline-block;
+  width: 30px;
+}
+.footer-list-item {
+  width: calc(100vw - 70px);
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.Introduction {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.Introduction-location {
+  background-color: rgb(234, 234, 234);
+  padding: 15px;
+}
+.Introduction-location-icon {
+  display: inline-block;
+  width: 30px;
+}
+.Introduction-cta {
+  background-color: rgb(246, 246, 246);
+  padding: 30px 30px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Introduction-cta-title {
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.Introduction-cta-desc {
+  font-weight: 300;
+  font-size: 18px;
+}
+.Introduction-cta-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.Introduction-cta-box-button {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
+}
+.Introduction-tutorial {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 30px 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.Introduction-tutorial-title {
+  text-align: start;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.Introduction-tutorial-stepCard {
+  margin-bottom: 20px;
+  width: 95%;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.StepCard {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+.StepCard-number {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: rgb(147, 86, 220);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -5vw;
+}
+.StepCard-icon {
+  width: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 20px 0 10px 0;
+  width: 200px;
+}
+.logo-small {
+  width: 100px;
+}
+
+/*# sourceMappingURL=main.css.map */
