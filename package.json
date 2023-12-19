@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selenemouriaux/selenemouriaux.github.io.git"
+    "url": "git+https://github.com/selenemouriaux/ohmyfood.git"
   },
   "author": "S_il_vanas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/selenemouriaux/selenemouriaux.github.io/issues"
+    "url": "https://github.com/selenemouriaux/ohmyfood/issues"
   },
-  "homepage": "https://github.com/selenemouriaux/selenemouriaux.github.io#readme",
+  "homepage": "https://github.com/selenemouriaux/ohmyfood#readme",
   "dependencies": {
     "-": "^0.0.1",
     "sass": "^1.69.5"
