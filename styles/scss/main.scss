@@ -3,9 +3,13 @@
 @import "footer";
 @import "introduction";
 @import "restaurant";
-@import "thumbnails";
+@import "restaurantsList";
 @import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -15,6 +19,7 @@
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 .wrapper {

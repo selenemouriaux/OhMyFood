@@ -39,6 +39,11 @@
         padding: 15px;
         border-radius: 30px;
         background: $buttonGradient;
+        box-shadow: $shadowButton;
+        transition: background 0.3 ease;
+        &:hover {
+          background: $buttonGradienthover;
+        }
       }
     }
   }
@@ -46,7 +51,7 @@
     background-color: $white;
     display: flex;
     flex-direction: row;
-    margin: 30px 15px;
+    margin: 30px 15px 45px 15px;
     flex-wrap: wrap;
     justify-content: flex-end;
     &-title {
@@ -59,7 +64,6 @@
     &-stepCard {
       margin-bottom: 20px;
       width: 95%;
-
       box-shadow: $shadowInstructions;
     }
   }
@@ -88,5 +92,9 @@
   }
   &-icon {
     width: 40px;
+  }
+  &-step {
+    font-weight: 500;
+    font-size: 16px;
   }
 }

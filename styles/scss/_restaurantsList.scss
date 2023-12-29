@@ -1,0 +1,82 @@
+@import "variables";
+
+.RestaurantsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 45px 15px;
+  background-color: $background;
+  &-title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 20px;
+    height: 250px;
+  }
+}
+
+.RestoCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &-imageBox {
+    height: 175px;
+    width: 100%;
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-sticker {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: right;
+      color: $greenFont;
+      font-weight: 500;
+      font-size: 14px;
+      background-color: $green;
+      padding: 5px 10px;
+      box-shadow: $shadowBadge;
+      border-radius: 5px;
+    }
+  }
+  &-infoBox {
+    position: relative;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    &-location {
+      font-weight: 300;
+      font-size: 17px;
+    }
+    &-like {
+      position: absolute;
+      right: 30px;
+      & > input {
+        position: absolute;
+        top: -11px;
+        left: -11px;
+        width: 0;
+        height: 0;
+      }
+      & > input:before {
+        content: url("/images/buttons/like-unchecked.png");
+      }
+      & > input:checked:before {
+        content: url("/images/buttons/like-checked.png");
+      }
+    }
+  }
+}
