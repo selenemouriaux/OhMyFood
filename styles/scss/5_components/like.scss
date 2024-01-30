@@ -1,0 +1,15 @@
+.Like {
+  & > input {
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: 0;
+    height: 0;
+  }
+  & > input:before {
+    content: url("/images/buttons/like-unchecked.png");
+  }
+  & > input:checked:before {
+    content: url("/images/buttons/like-checked.png");
+  }
+}

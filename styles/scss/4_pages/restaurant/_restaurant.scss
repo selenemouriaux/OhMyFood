@@ -1,0 +1,68 @@
+.RestoBanner {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  &-nameBox {
+    position: absolute;
+    top: 225px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $background;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    &-name {
+      font-family: $titleFont;
+      font-size: 28px;
+    }
+    &-like {
+      position: absolute;
+      right: 50px;
+    }
+  }
+}
+
+.RestoMenu {
+  background-color: $background;
+  padding: 0 20px 30px 20px;
+  &-course {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      position: relative;
+      font-weight: 300;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    &-title::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: $green;
+    }
+    &-list {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &-order {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

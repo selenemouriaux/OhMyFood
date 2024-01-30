@@ -1,0 +1,16 @@
+.BigBtn {
+  & > a {
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 30px;
+    background: $buttonGradient;
+    box-shadow: $shadowButton;
+    transition: background 0.3 ease;
+    &:hover {
+      background: $buttonGradienthover;
+    }
+  }
+}

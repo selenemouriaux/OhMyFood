@@ -14,7 +14,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="styles/css/accueil.css" />
     <title>OhMyFood - Accueil</title>
   </head>
   <body>
@@ -41,10 +41,8 @@
             <p class="Introduction-cta-desc">
               Découvrez des restaurants d'exception, sélectionnés par nos soins.
             </p>
-            <p class="Introduction-cta-box">
-              <a class="Introduction-cta-box-button" href="#restaurants"
-                >Explorer nos restaurants</a
-              >
+            <p class="Introduction-cta-box BigBtn">
+              <a href="#restaurants">Explorer nos restaurants</a>
             </p>
           </div>
           <div class="Introduction-tutorial">
@@ -68,11 +66,15 @@
         </section>
         <section id="restaurants" class="RestaurantsList">
           <p class="RestaurantsList-title">Restaurants</p>
-          <a href="/resto1.html" class="RestaurantsList-item RestoCard">
+          <a
+            id="laPaletteDuGout"
+            href="/pages/resto1.html"
+            class="RestaurantsList-item RestoCard"
+          >
             <div class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
-                src="images/restaurants/laPaletteDuGout.jpg"
+                src="images/restaurants/resto_1.jpg"
                 alt="plat du restaurant la palette du gout"
               />
               <div class="RestoCard-imageBox-sticker">Nouveau</div>
@@ -80,16 +82,20 @@
             <div class="RestoCard-infoBox">
               <span class="RestoCard-infoBox-title">La palette du goût</span>
               <span class="RestoCard-infoBox-location">Ménilmontant</span>
-              <div class="RestoCard-infoBox-like">
+              <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like1" />
               </div>
             </div>
           </a>
-          <a href="/resto2.html" class="RestaurantsList-item RestoCard">
+          <a
+            id="laNoteEnchantee"
+            href="/pages/resto2.html"
+            class="RestaurantsList-item RestoCard"
+          >
             <div class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
-                src="images/restaurants/laNoteEnchantee.jpg"
+                src="images/restaurants/resto_2.jpg"
                 alt="plat du restaurant la note enchantée"
               />
               <div class="RestoCard-imageBox-sticker">Nouveau</div>
@@ -97,39 +103,47 @@
             <div class="RestoCard-infoBox">
               <span class="RestoCard-infoBox-title">La note enchantée</span>
               <span class="RestoCard-infoBox-location">Charonne</span>
-              <div class="RestoCard-infoBox-like">
+              <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like2" />
               </div>
             </div>
           </a>
-          <a href="/resto3.html" class="RestaurantsList-item RestoCard">
+          <a
+            id="ALafrancaise"
+            href="/pages/resto3.html"
+            class="RestaurantsList-item RestoCard"
+          >
             <div class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
-                src="images/restaurants/ALaFrancaise.jpg"
+                src="images/restaurants/resto_3.jpg"
                 alt="plat du restaurant À la française"
               />
             </div>
             <div class="RestoCard-infoBox">
               <span class="RestoCard-infoBox-title">À la française</span>
               <span class="RestoCard-infoBox-location">Cité Rouge</span>
-              <div class="RestoCard-infoBox-like">
+              <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like3" />
               </div>
             </div>
           </a>
-          <a href="/resto4.html" class="RestaurantsList-item RestoCard">
+          <a
+            id="LeDeliceDesSens"
+            href="/pages/resto4.html"
+            class="RestaurantsList-item RestoCard"
+          >
             <div class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
-                src="images/restaurants/leDeliceDesSens.jpg"
+                src="images/restaurants/resto_4.jpg"
                 alt="plat du restaurant Le délice des sens"
               />
             </div>
             <div class="RestoCard-infoBox">
               <span class="RestoCard-infoBox-title">Le délice des sens</span>
               <span class="RestoCard-infoBox-location">Folie-Méricourt</span>
-              <div class="RestoCard-infoBox-like">
+              <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like4" />
               </div>
             </div>
@@ -150,7 +164,11 @@
           ></span>
           <span class="footer-list-item bold">Devenir partenaire</span>
           <span class="footer-list-item">Mentions légales</span>
-          <span class="footer-list-item">Contact</span>
+          <a
+            href="mailto:toto@toto.com?subject=Contact"
+            class="footer-list-item"
+            >Contact</a
+          >
         </div>
       </footer>
     </div>

@@ -4,7 +4,8 @@
   "description": "P3 OpenClassrooms",
   "main": "index.html",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "sasswatcher": "sass --watch styles/scss:styles/css --no-source-map"
   },
   "repository": {
     "type": "git",
