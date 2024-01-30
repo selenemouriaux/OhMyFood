@@ -54,10 +54,10 @@ header {
   height: 0;
 }
 .Like > input:before {
-  content: url("/images/buttons/like-unchecked.png");
+  content: url("../../../images/buttons/like-unchecked.png");
 }
 .Like > input:checked:before {
-  content: url("/images/buttons/like-checked.png");
+  content: url("../../../images/buttons/like-checked.png");
 }
 
 .Course {
