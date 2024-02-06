@@ -1,13 +1,22 @@
-.Like > input {
+.Like {
+  position: relative;
+  width: 22px;
+  height: 21px;
+}
+.Like img {
   position: absolute;
-  top: -11px;
-  left: -11px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.Like > input {
   width: 0;
   height: 0;
 }
-.Like > input:before {
-  content: url("../../images/buttons/like-unchecked.png");
+.Like > input:not(:checked) + .Like-button img:first-child {
+  opacity: 1;
 }
-.Like > input:checked:before {
-  content: url("../../images/buttons/like-checked.png");
+.Like > input:checked + .Like-button img:nth-child(2) {
+  opacity: 1;
 }
