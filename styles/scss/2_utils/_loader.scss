@@ -1,11 +1,12 @@
 .Loader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba($color: #11021a, $alpha: 0.8);
   z-index: 10;
+  animation: fadeout 1s 2s forwards;
   &-plate {
     position: absolute;
     z-index: 11;
@@ -13,7 +14,7 @@
     right: 50%;
     width: 45%;
     height: 60vh;
-    &-inner {
+    &-drawing {
       position: absolute;
       top: 13vh;
       right: 10vh;
@@ -22,7 +23,7 @@
       height: 34vh;
       width: 34vh;
     }
-    &-inner::before {
+    &-drawing::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -42,6 +43,8 @@
     left: 52%;
     width: 90px;
     height: 40vh;
+    transform-style: preserve-3d;
+    animation: grabbing 1s cubic-bezier(0.75, -1.19, 0.57, 2.03) 2 forwards;
     &-handle {
       background-color: $green;
       border-radius: 15px;
@@ -98,6 +101,10 @@
     left: calc(52% + 90px);
     width: 90px;
     height: 34vh;
+    transform-style: preserve-3d;
+    // transition: all 0.5s ease;
+    // transform: translateY(0) skewX(0deg);
+    animation: grabbing 1s cubic-bezier(0.59, -1.03, 0.42, 2.06) 2 forwards;
     &-handle {
       background-color: $green;
       border-radius: 15px;
@@ -128,5 +135,45 @@
       border-radius: 20px;
       transform: rotate(225deg);
     }
+  }
+  + .wrapper {
+    * {
+      filter: blur(5px);
+      animation: resetBlur 1s 2s forwards;
+    }
+  }
+}
+
+@keyframes grabbing {
+  0% {
+    transform: translateY(0) skew(0deg, 0deg);
+  }
+  10% {
+    transform: translateY(2vh) skew(10deg, 10deg);
+  }
+  60% {
+    transform: translateY(17vh) skew(0deg, 5deg);
+  }
+  100% {
+    transform: translateY(20vh) skew(0deg, 0deg);
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes resetBlur {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: none;
   }
 }

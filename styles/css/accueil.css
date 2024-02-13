@@ -48,13 +48,14 @@ header {
 }
 
 .Loader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(17, 2, 26, 0.8);
   z-index: 10;
+  animation: fadeout 1s 2s forwards;
 }
 .Loader-plate {
   position: absolute;
@@ -64,7 +65,7 @@ header {
   width: 45%;
   height: 60vh;
 }
-.Loader-plate-inner {
+.Loader-plate-drawing {
   position: absolute;
   top: 13vh;
   right: 10vh;
@@ -73,7 +74,7 @@ header {
   height: 34vh;
   width: 34vh;
 }
-.Loader-plate-inner::before {
+.Loader-plate-drawing::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -92,6 +93,8 @@ header {
   left: 52%;
   width: 90px;
   height: 40vh;
+  transform-style: preserve-3d;
+  animation: grabbing 1s cubic-bezier(0.75, -1.19, 0.57, 2.03) 2 forwards;
 }
 .Loader-fork-handle {
   background-color: #99e2d0;
@@ -148,6 +151,8 @@ header {
   left: calc(52% + 90px);
   width: 90px;
   height: 34vh;
+  transform-style: preserve-3d;
+  animation: grabbing 1s cubic-bezier(0.59, -1.03, 0.42, 2.06) 2 forwards;
 }
 .Loader-knife-handle {
   background-color: #99e2d0;
@@ -179,7 +184,42 @@ header {
   border-radius: 20px;
   transform: rotate(225deg);
 }
+.Loader + .wrapper * {
+  filter: blur(5px);
+  animation: resetBlur 1s 2s forwards;
+}
 
+@keyframes grabbing {
+  0% {
+    transform: translateY(0) skew(0deg, 0deg);
+  }
+  10% {
+    transform: translateY(2vh) skew(10deg, 10deg);
+  }
+  60% {
+    transform: translateY(17vh) skew(0deg, 5deg);
+  }
+  100% {
+    transform: translateY(20vh) skew(0deg, 0deg);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes resetBlur {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: none;
+  }
+}
 .BigBtn > a {
   color: white;
   font-weight: 500;
