@@ -19,6 +19,7 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .logo {
@@ -46,6 +47,139 @@ header {
   color: black;
 }
 
+.Loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(17, 2, 26, 0.8);
+  z-index: 10;
+}
+.Loader-plate {
+  position: absolute;
+  z-index: 11;
+  top: 20vh;
+  right: 50%;
+  width: 45%;
+  height: 60vh;
+}
+.Loader-plate-inner {
+  position: absolute;
+  top: 13vh;
+  right: 10vh;
+  background-color: #99e2d0;
+  border-radius: 50%;
+  height: 34vh;
+  width: 34vh;
+}
+.Loader-plate-inner::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #008766;
+  border-radius: 50%;
+  height: 50vh;
+  width: 50vh;
+}
+.Loader-fork {
+  position: absolute;
+  z-index: 11;
+  top: 33vh;
+  left: 52%;
+  width: 90px;
+  height: 40vh;
+}
+.Loader-fork-handle {
+  background-color: #99e2d0;
+  border-radius: 15px;
+  position: absolute;
+  top: 11vh;
+  height: 29vh;
+  left: 30px;
+  width: 30px;
+}
+.Loader-fork-tinesBase {
+  background-color: #99e2d0;
+  border-radius: 10px;
+  position: absolute;
+  top: 9.5vh;
+  height: 3vh;
+  left: 0;
+  width: 90px;
+}
+.Loader-fork-tineL {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0;
+  height: 11.5vh;
+  left: 0;
+  width: 28px;
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+  border-radius: 20px;
+}
+.Loader-fork-tineC {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0;
+  height: 11.5vh;
+  left: 31px;
+  width: 28px;
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+  border-radius: 20px;
+}
+.Loader-fork-tineR {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0;
+  height: 11.5vh;
+  left: 62px;
+  width: 28px;
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+  border-radius: 20px;
+}
+.Loader-knife {
+  position: absolute;
+  z-index: 11;
+  top: 33vh;
+  left: calc(52% + 90px);
+  width: 90px;
+  height: 34vh;
+}
+.Loader-knife-handle {
+  background-color: #99e2d0;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  height: 40vh;
+  left: 30px;
+  width: 30px;
+}
+.Loader-knife-blade1 {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0;
+  height: 15vh;
+  left: 0;
+  width: 60px;
+  clip-path: polygon(50% 10%, 100% 10%, 100% 100%, 0 100%);
+  border-radius: 20px;
+}
+.Loader-knife-blade2 {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 13vh;
+  height: 4vh;
+  left: 0;
+  width: 60px;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 50% 100%);
+  border-radius: 20px;
+  transform: rotate(225deg);
+}
+
 .BigBtn > a {
   color: white;
   font-weight: 500;
@@ -54,11 +188,11 @@ header {
   padding: 15px;
   border-radius: 30px;
   background: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: background 0.3 ease;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .BigBtn > a:hover {
   background: linear-gradient(to top, #ae80e5 -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .Introduction {
@@ -174,7 +308,7 @@ header {
 .Like > input:not(:checked) + .Like-button img:first-child {
   opacity: 1;
 }
-.Like > input:checked + .Like-button img:nth-child(2) {
+.Like > input:checked + .Like-button img:nth-child(2), .Like > input:hover + .Like-button img:nth-child(2) {
   opacity: 1;
 }
 

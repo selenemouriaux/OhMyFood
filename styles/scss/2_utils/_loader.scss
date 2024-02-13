@@ -1,0 +1,132 @@
+.Loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #11021a, $alpha: 0.8);
+  z-index: 10;
+  &-plate {
+    position: absolute;
+    z-index: 11;
+    top: 20vh;
+    right: 50%;
+    width: 45%;
+    height: 60vh;
+    &-inner {
+      position: absolute;
+      top: 13vh;
+      right: 10vh;
+      background-color: $green;
+      border-radius: 50%;
+      height: 34vh;
+      width: 34vh;
+    }
+    &-inner::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      background-color: $greenFont;
+      border-radius: 50%;
+      height: 50vh;
+      width: 50vh;
+    }
+  }
+  &-fork {
+    position: absolute;
+    z-index: 11;
+    top: 33vh;
+    left: 52%;
+    width: 90px;
+    height: 40vh;
+    &-handle {
+      background-color: $green;
+      border-radius: 15px;
+      position: absolute;
+      top: 11vh;
+      height: 29vh;
+      left: 30px;
+      width: 30px;
+    }
+    &-tinesBase {
+      background-color: $green;
+      border-radius: 10px;
+      position: absolute;
+      top: 9.5vh;
+      height: 3vh;
+      left: 0;
+      width: 90px;
+    }
+    &-tineL {
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      height: 11.5vh;
+      left: 0;
+      width: 28px;
+      clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+      border-radius: 20px;
+    }
+    &-tineC {
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      height: 11.5vh;
+      left: 31px;
+      width: 28px;
+      clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+      border-radius: 20px;
+    }
+    &-tineR {
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      height: 11.5vh;
+      left: 62px;
+      width: 28px;
+      clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+      border-radius: 20px;
+    }
+  }
+  &-knife {
+    position: absolute;
+    z-index: 11;
+    top: 33vh;
+    left: calc(52% + 90px);
+    width: 90px;
+    height: 34vh;
+    &-handle {
+      background-color: $green;
+      border-radius: 15px;
+      position: absolute;
+      top: 0;
+      height: 40vh;
+      left: 30px;
+      width: 30px;
+    }
+    &-blade1 {
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      height: 15vh;
+      left: 0;
+      width: 60px;
+      clip-path: polygon(50% 10%, 100% 10%, 100% 100%, 0 100%);
+      border-radius: 20px;
+    }
+    &-blade2 {
+      background-color: $green;
+      position: absolute;
+      top: 13vh;
+      height: 4vh;
+      left: 0;
+      width: 60px;
+      clip-path: polygon(0 0, 100% 10%, 100% 100%, 50% 100%);
+      border-radius: 20px;
+      transform: rotate(225deg);
+    }
+  }
+}

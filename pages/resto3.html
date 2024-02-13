@@ -4,13 +4,173 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>OhMyFood - La note enchantée</title>
+    <script
+      src="https://kit.fontawesome.com/c6a24866e1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles/css/restaurant.css" />
+    <title>OhMyFood - À la française</title>
   </head>
   <body>
     <div class="wrapper">
-      <header></header>
-      <main></main>
-      <footer></footer>
+      <header>
+        <a class="nav" href="../index.html#aLaFrancaise">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <img
+          class="logo"
+          src="../images/logo/ohmyfood.png"
+          alt="logo Oh My Food"
+        />
+      </header>
+      <main>
+        <section class="RestoBanner">
+          <img
+            class="RestoBanner-image"
+            src="../images/restaurants/resto_3.jpg"
+            alt="Exemple de repas proposé par le restaurant la palette du goût."
+          />
+          <div class="RestoBanner-nameBox">
+            <span class="RestoBanner-nameBox-name">À la française</span>
+            <div class="RestoBanner-nameBox-like Like">
+              <input type="checkbox" id="like1" />
+              <label class="Like-button" for="like1">
+                <img src="../images/buttons/like-unchecked.png" alt="not favorited">
+                <img src="../images/buttons/like-checked.png" alt="favorited">
+              </label>
+            </div>
+          </div>
+        </section>
+        <section class="RestoMenu">
+          <div class="RestoMenu-course">
+            <p class="RestoMenu-course-title">ENTRÉES</p>
+            <div class="RestoMenu-course-list Course">
+              <input type="checkbox" id="entree-1">
+              <label for="entree-1">
+                <div class="Course-item">
+                  <div class="Course-item-texts">
+                    <p class="Course-item-texts-title">Tartare de poulpe acidulé</p>
+                    <p class="Course-item-texts-desc">Aux zestes d'orange</p></div>
+                    <div class="Course-item-price">25€</div>
+                    <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+                  </div>
+                </label>
+                <input type="checkbox" id="entree-2">
+                <label for="entree-2">
+                  <div class="Course-item">
+                    <div class="Course-item-texts">
+                      <p class="Course-item-texts-title">Velouté de légumes d'antan</p>
+                      <p class="Course-item-texts-desc">Carotte, panais, topinambour</p></div>
+                      <div class="Course-item-price">35€</div>
+                      <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="entree-3">
+                  <label for="entree-3">
+                    <div class="Course-item">
+                      <div class="Course-item-texts">
+                        <p class="Course-item-texts-title">Soupe à l'oignon</p>
+                        <p class="Course-item-texts-desc">Revisitée</p></div>
+                        <div class="Course-item-price">20€</div>
+                        <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+                      </div>
+                    </div>
+                  </label>
+                  </div>
+                  <div class="RestoMenu-course">
+                    <p class="RestoMenu-course-title">PLATS</p>
+                    <div class="RestoMenu-course-list Course">
+              <input type="checkbox" id="plat-1">
+              <label for="plat-1">
+                <div class="Course-item">
+                  <div class="Course-item-texts">
+                    <p class="Course-item-texts-title">Coquilles Saint-Jacques</p>
+                    <p class="Course-item-texts-desc">Accompagnées d'une purée de panais</p></div>
+                    <div class="Course-item-price">40€</div>
+                    <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+                  </div>
+                </label>
+                <input type="checkbox" id="plat-2">
+                <label for="plat-2">
+              <div class="Course-item">
+                <div class="Course-item-texts">
+                  <p class="Course-item-texts-title">Magret de canard</p>
+                  <p class="Course-item-texts-desc">Et parmentier de pommes de terre</p></div>
+                <div class="Course-item-price">35€</div>
+                <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+              </div>
+            </label>
+              <input type="checkbox" id="plat-3">
+              <label for="plat-3">
+              <div class="Course-item">
+                <div class="Course-item-texts">
+                  <p class="Course-item-texts-title">Pigeonneau d'Ille-et-Vilaine</p>
+                  <p class="Course-item-texts-desc">Sur son lit de gnocchis aux légumes</p></div>
+                <div class="Course-item-price">44€</div>
+                <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+              </div>
+            </label>
+          </div>
+          <div class="RestoMenu-course">
+            <p class="RestoMenu-course-title">DESSERTS</p>
+            <div class="RestoMenu-course-list Course">
+              <input type="checkbox" id="dessert-1">
+              <label for="dessert-1">
+              <div class="Course-item">
+                <div class="Course-item-texts">Pétales de violette glacés</p>
+                  <p class="Course-item-texts-desc">Et purée de noisettes</p></div>
+                <div class="Course-item-price">18€</div>
+                <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+              </div>
+            </label>
+              <input type="checkbox" id="dessert-2">
+              <label for="dessert-2">
+              <div class="Course-item">
+                <div class="Course-item-texts">
+                  <p class="Course-item-texts-title">Fondant au chocolat</p>
+                  <p class="Course-item-texts-desc">Revisité</p></div>
+                <div class="Course-item-price">22€</div>
+                <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+              </div>
+            </label>
+              <input type="checkbox" id="dessert-3">
+              <label for="dessert-3">
+              <div class="Course-item">
+                <div class="Course-item-texts">
+                  <p class="Course-item-texts-title">Millefeuillle croustillant</p>
+                  <p class="Course-item-texts-desc">Myrtilles et pâte d'amande</p></div>
+                <div class="Course-item-price">23€</div>
+                <div class="Course-item-check"><img src="../images/icons/checked-sign.svg" alt=""></div>
+              </div>
+            </label>
+          </div>
+          <div class="RestoMenu-order BigBtn">
+            <a href="#">Commander</a></div>
+        </section>
+      </main>
+      <footer>
+        <img
+          class="logo-small"
+          src="../images/logo/ohmyfood@2x.svg"
+          alt="logo Oh My Food"
+        />
+        <div class="footer-list">
+          <span class="footer-list-icon"><i class="fas fa-utensils"></i></span>
+          <span class="footer-list-item bold">Proposer un restaurant</span>
+          <span class="footer-list-icon"
+            ><i class="fas fa-hands-helping"></i
+          ></span>
+          <span class="footer-list-item bold">Devenir partenaire</span>
+          <span class="footer-list-item">Mentions légales</span>
+          <a href="mailto:toto@toto.com?subject=Contact" class="footer-list-item">Contact</a>
+          </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -7,10 +7,10 @@
     padding: 15px;
     border-radius: 30px;
     background: $buttonGradient;
-    box-shadow: $shadowButton;
-    transition: background 0.3 ease;
+    box-shadow: $shadowInstructions;
     &:hover {
       background: $buttonGradienthover;
+      box-shadow: $shadowButton;
     }
   }
 }

@@ -17,6 +17,6 @@
 .Like > input:not(:checked) + .Like-button img:first-child {
   opacity: 1;
 }
-.Like > input:checked + .Like-button img:nth-child(2) {
+.Like > input:checked + .Like-button img:nth-child(2), .Like > input:hover + .Like-button img:nth-child(2) {
   opacity: 1;
 }

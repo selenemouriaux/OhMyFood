@@ -19,6 +19,7 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .logo {
@@ -65,7 +66,7 @@ header {
 .Like > input:not(:checked) + .Like-button img:first-child {
   opacity: 1;
 }
-.Like > input:checked + .Like-button img:nth-child(2) {
+.Like > input:checked + .Like-button img:nth-child(2), .Like > input:hover + .Like-button img:nth-child(2) {
   opacity: 1;
 }
 
@@ -212,11 +213,11 @@ header {
   padding: 15px;
   border-radius: 30px;
   background: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: background 0.3 ease;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .BigBtn > a:hover {
   background: linear-gradient(to top, #ae80e5 -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 footer {

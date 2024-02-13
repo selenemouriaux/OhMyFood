@@ -15,7 +15,8 @@
     &:not(:checked) + .Like-button img:first-child {
       opacity: 1;
     }
-    &:checked + .Like-button img:nth-child(2) {
+    &:checked + .Like-button img:nth-child(2),
+    &:hover + .Like-button img:nth-child(2) {
       opacity: 1;
     }
   }
