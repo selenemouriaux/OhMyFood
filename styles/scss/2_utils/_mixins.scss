@@ -1,0 +1,31 @@
+@mixin cutleryBasics {
+  position: absolute;
+  z-index: 11;
+  top: 33vh;
+  width: 90px;
+}
+
+@mixin drawingsBasics {
+  background-color: $green;
+  position: absolute;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin centeredXY {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin typo($fw, $fs) {
+  font-weight: $fw;
+  font-size: #{$fs}px;
+}

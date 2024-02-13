@@ -1,6 +1,5 @@
 .Introduction {
-  display: flex;
-  flex-direction: column;
+  @include flexCol;
   text-align: center;
   &-location {
     background-color: $grey2;
@@ -15,24 +14,20 @@
       width: 110px;
       border: none;
       background-color: unset;
-      font-weight: 500;
-      font-size: 16px;
+      @include typo(500, 16);
     }
   }
   &-cta {
+    @include flexCol;
     background-color: $background;
     padding: 30px 30px 40px 30px;
-    display: flex;
-    flex-direction: column;
     gap: 15px;
     &-title {
+      @include typo(700, 24);
       padding: 0 20px;
-      font-weight: 700;
-      font-size: 24px;
     }
     &-desc {
-      font-weight: 300;
-      font-size: 18px;
+      @include typo(300, 18);
     }
     &-box {
       display: flex;
@@ -42,16 +37,14 @@
   }
   &-tutorial {
     background-color: $white;
-    display: flex;
-    flex-direction: row;
+    @include flexRow;
     margin: 30px 15px 45px 15px;
     flex-wrap: wrap;
     justify-content: flex-end;
     &-title {
       text-align: start;
       width: 100%;
-      font-weight: 700;
-      font-size: 24px;
+      @include typo(700, 24);
       margin-bottom: 20px;
     }
     &-stepCard {
@@ -59,35 +52,5 @@
       width: 100%;
       box-shadow: $shadowInstructions;
     }
-  }
-}
-
-.StepCard {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: $grey2;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  &-number {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    background: $primary;
-    color: $white;
-    font-weight: 500;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: -12px;
-  }
-  &-icon {
-    width: 40px;
-  }
-  &-step {
-    font-weight: 500;
-    font-size: 16px;
   }
 }

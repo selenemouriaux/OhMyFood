@@ -15,10 +15,10 @@ a {
 }
 
 .wrapper {
-  font-family: "Roboto", sans-serif;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
   position: relative;
 }
 
@@ -32,10 +32,10 @@ a {
 
 header {
   display: flex;
-  position: relative;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
@@ -90,16 +90,15 @@ header {
   position: absolute;
   z-index: 11;
   top: 33vh;
-  left: 52%;
   width: 90px;
+  left: 52%;
   height: 40vh;
-  transform-style: preserve-3d;
   animation: grabbing 1s cubic-bezier(0.75, -1.19, 0.57, 2.03) 2 forwards;
 }
 .Loader-fork-handle {
   background-color: #99e2d0;
-  border-radius: 15px;
   position: absolute;
+  border-radius: 15px;
   top: 11vh;
   height: 29vh;
   left: 30px;
@@ -107,8 +106,8 @@ header {
 }
 .Loader-fork-tinesBase {
   background-color: #99e2d0;
-  border-radius: 10px;
   position: absolute;
+  border-radius: 10px;
   top: 9.5vh;
   height: 3vh;
   left: 0;
@@ -148,16 +147,15 @@ header {
   position: absolute;
   z-index: 11;
   top: 33vh;
-  left: calc(52% + 90px);
   width: 90px;
+  left: calc(52% + 90px);
   height: 34vh;
-  transform-style: preserve-3d;
   animation: grabbing 1s cubic-bezier(0.59, -1.03, 0.42, 2.06) 2 forwards;
 }
 .Loader-knife-handle {
   background-color: #99e2d0;
-  border-radius: 15px;
   position: absolute;
+  border-radius: 15px;
   top: 0;
   height: 40vh;
   left: 30px;
@@ -221,9 +219,9 @@ header {
   }
 }
 .BigBtn > a {
-  color: white;
   font-weight: 500;
   font-size: 16px;
+  color: white;
   width: fit-content;
   padding: 15px;
   border-radius: 30px;
@@ -233,6 +231,37 @@ header {
 .BigBtn > a:hover {
   background: linear-gradient(to top, #ae80e5 -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.StepCard {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(234, 234, 234);
+  position: relative;
+}
+.StepCard-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background: rgb(147, 86, 220);
+  color: white;
+  left: -12px;
+}
+.StepCard-icon {
+  width: 40px;
+}
+.StepCard-step {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .Introduction {
@@ -258,16 +287,16 @@ header {
   font-size: 16px;
 }
 .Introduction-cta {
-  background-color: rgb(246, 246, 246);
-  padding: 30px 30px 40px 30px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(246, 246, 246);
+  padding: 30px 30px 40px 30px;
   gap: 15px;
 }
 .Introduction-cta-title {
-  padding: 0 20px;
   font-weight: 700;
   font-size: 24px;
+  padding: 0 20px;
 }
 .Introduction-cta-desc {
   font-weight: 300;
@@ -297,36 +326,6 @@ header {
   margin: 0 0 20px 12px;
   width: 100%;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-}
-
-.StepCard {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgb(234, 234, 234);
-  display: flex;
-  position: relative;
-  flex-direction: row;
-}
-.StepCard-number {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  background: rgb(147, 86, 220);
-  color: white;
-  font-weight: 500;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: -12px;
-}
-.StepCard-icon {
-  width: 40px;
-}
-.StepCard-step {
-  font-weight: 500;
-  font-size: 16px;
 }
 
 .Like {
@@ -372,9 +371,9 @@ header {
 }
 
 .RestoCard {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   position: relative;
 }
 .RestoCard-imageBox {
@@ -387,23 +386,23 @@ header {
   object-fit: cover;
 }
 .RestoCard-imageBox-sticker {
+  font-weight: 500;
+  font-size: 14px;
   position: absolute;
   top: 20px;
   right: 20px;
   text-align: right;
   color: #008766;
-  font-weight: 500;
-  font-size: 14px;
   background-color: #99e2d0;
   padding: 5px 10px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
 }
 .RestoCard-infoBox {
-  position: relative;
-  height: 75px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 75px;
   justify-content: space-around;
   padding: 10px;
 }
@@ -421,9 +420,9 @@ header {
 }
 
 footer {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
+  margin-top: auto;
   justify-content: center;
   align-items: start;
   padding: 20px;
@@ -434,17 +433,19 @@ footer {
 
 .footer-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: start;
   align-items: start;
 }
-.footer-list-icon {
+.footer-list-line {
+  display: flex;
+  width: 100%;
+}
+.footer-list-line-icon {
   display: inline-block;
   width: 30px;
 }
-.footer-list-item {
-  width: calc(100vw - 70px);
+.footer-list-line-item {
   margin-bottom: 8px;
   font-weight: 400;
   font-size: 16px;

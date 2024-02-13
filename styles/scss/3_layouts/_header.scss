@@ -1,9 +1,7 @@
 header {
-  display: flex;
+  @include flexRow;
+  @include centeredXY;
   position: relative;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   box-shadow: $shadowBadge;
   z-index: 2;
 }

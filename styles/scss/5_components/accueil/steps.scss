@@ -1,0 +1,25 @@
+.StepCard {
+  @include flexRow;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $grey2;
+  position: relative;
+  &-number {
+    @include flexRow;
+    @include centeredXY;
+    @include typo(500, 14);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: $primary;
+    color: $white;
+    left: -12px;
+  }
+  &-icon {
+    width: 40px;
+  }
+  &-step {
+    @include typo(500, 16);
+  }
+}

@@ -1,0 +1,43 @@
+.RestoCard {
+  @include flexCol;
+  overflow: hidden;
+  position: relative;
+  &-imageBox {
+    height: 175px;
+    width: 100%;
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-sticker {
+      @include typo(500, 14);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: right;
+      color: $greenFont;
+      background-color: $green;
+      padding: 5px 10px;
+      box-shadow: $shadowBadge;
+      border-radius: 5px;
+    }
+  }
+  &-infoBox {
+    @include flexCol;
+    position: relative;
+    height: 75px;
+    justify-content: space-around;
+    padding: 10px;
+    &-title {
+      @include typo(700, 18);
+    }
+    &-location {
+      @include typo(300, 17);
+    }
+    &-like {
+      position: absolute;
+      right: 30px;
+    }
+  }
+}
