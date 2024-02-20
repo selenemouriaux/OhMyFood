@@ -11,6 +11,18 @@
     box-shadow: $shadowCard;
     overflow: hidden;
     justify-content: space-between;
+    opacity: 0;
+    &-label {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      opacity: 0;
+      transform: translateY(0);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
     &-texts {
       white-space: nowrap;
       overflow: hidden;
@@ -49,15 +61,38 @@
   & > input {
     display: none;
   }
-
-  & > input[type="checkbox"]:checked + label {
-    & > .Course-item {
-      padding-right: 70px;
+  & > input[type="checkbox"]:checked + .Course-item,
+  :hover {
+    padding-right: 70px;
+    transition: all 0.5s;
+    .Course-item-check {
+      right: 0;
       transition: all 0.5s;
-      & > .Course-item-check {
-        right: 0;
-        transition: all 0.5s;
+    }
+  }
+}
+
+@for $j from 1 through 4 {
+  @for $k from 1 through 10 {
+    .RestoMenu-course:nth-child(#{$j}) {
+      .Course-item:nth-child(#{$k}) {
+        animation: fadeInFromTop
+          0.5s
+          ease-in-out
+          ($j * 2.5s - 2s + $k * 0.2s)
+          forwards;
       }
     }
+  }
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

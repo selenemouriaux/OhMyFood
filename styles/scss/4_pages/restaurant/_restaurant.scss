@@ -58,11 +58,7 @@
     &-list {
       width: 100%;
       margin-bottom: 30px;
-      &-label {
-        opacity: 0;
-        transform: translateY(-50%);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-      }
+      position: relative;
     }
   }
   &-order {
@@ -76,23 +72,10 @@
 //////////////////////// ANIMATIONS ///////////////////////////
 ///////////////////////////////////////////////////////////////
 
-// Loop for course titles (outerloop)
 @for $i from 1 through 4 {
   .RestoMenu-course:nth-child(#{$i}) {
     .RestoMenu-course-title {
-      animation: fadeInFromLeft 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards,
-        expand 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards;
-    }
-    // Loop for options of current course (innerloop)
-    @for $j from 1 through 10 {
-      .RestoMenu-course-list-label:nth-child(#{$j}) {
-        animation: fadeInFromTop
-            0.5s
-            ease-in-out
-            ($i * 2.5s - 2s + $j * 0.2s)
-            forwards,
-          expand 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards;
-      }
+      animation: fadeInFromLeft 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards;
     }
   }
 }
@@ -105,24 +88,6 @@
   100% {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-@keyframes fadeInFromTop {
-  0% {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes expand {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
   }
 }
 

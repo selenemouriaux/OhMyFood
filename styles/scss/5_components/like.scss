@@ -20,4 +20,8 @@
       opacity: 1;
     }
   }
+  &-hiddenInput {
+    height: 0;
+    width: 0;
+  }
 }

@@ -61,7 +61,7 @@ header {
   height: 100vh;
   background-color: rgba(17, 2, 26, 0.8);
   z-index: 10;
-  animation: fadeout 1s 0.2s forwards;
+  animation: fadeout 1s 2s forwards;
 }
 .Loader-plate {
   position: absolute;
@@ -190,7 +190,7 @@ header {
 }
 .Loader + .wrapper * {
   filter: blur(5px);
-  animation: resetBlur 1s 0.2s forwards;
+  animation: resetBlur 1s 2s forwards;
 }
 
 @keyframes grabbing {
@@ -372,6 +372,10 @@ header {
 }
 .Like > input:checked + .Like-button img:nth-child(2), .Like > input:hover + .Like-button img:nth-child(2) {
   opacity: 1;
+}
+.Like-hiddenInput {
+  height: 0;
+  width: 0;
 }
 
 .RestaurantsList {

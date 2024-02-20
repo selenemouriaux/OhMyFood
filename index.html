@@ -22,19 +22,19 @@
       <div class="Loader-plate">
         <div class="Loader-plate-drawing"></div>
       </div>
-        <div class="Loader-fork">
-          <div class="Loader-fork-handle"></div>
-          <div class="Loader-fork-tinesBase"></div>
-          <div class="Loader-fork-tineL"></div>
-          <div class="Loader-fork-tineC"></div>
-          <div class="Loader-fork-tineR"></div>
-        </div>
-        <div class="Loader-knife">
-          <div class="Loader-knife-handle"></div>
-          <div class="Loader-knife-blade1"></div>
-          <div class="Loader-knife-blade2"></div>
-        </div>
+      <div class="Loader-fork">
+        <div class="Loader-fork-handle"></div>
+        <div class="Loader-fork-tinesBase"></div>
+        <div class="Loader-fork-tineL"></div>
+        <div class="Loader-fork-tineC"></div>
+        <div class="Loader-fork-tineR"></div>
       </div>
+      <div class="Loader-knife">
+        <div class="Loader-knife-handle"></div>
+        <div class="Loader-knife-blade1"></div>
+        <div class="Loader-knife-blade2"></div>
+      </div>
+    </div>
     <div class="wrapper">
       <header>
         <img
@@ -49,12 +49,15 @@
             <span class="Introduction-location-icon"
               ><i class="fas fa-map-marker-alt"></i
             ></span>
-            <input class="Introduction-location-input" value="Paris, Belleville"></input>
+            <input
+              class="Introduction-location-input"
+              value="Paris, Belleville"
+            />
           </div>
           <div class="Introduction-cta">
-            <p class="Introduction-cta-title">
+            <h2 class="Introduction-cta-title">
               Réservez le menu qui vous convient
-            </p>
+            </h2>
             <p class="Introduction-cta-desc">
               Découvrez des restaurants d'exception, sélectionnés par nos soins.
             </p>
@@ -82,105 +85,129 @@
           </div>
         </section>
         <section id="restaurants" class="RestaurantsList">
-          <p class="RestaurantsList-title">Restaurants</p>
-          <a
-            id="laPaletteDuGout"
-            href="./pages/resto1.html"
-            class="RestaurantsList-item RestoCard"
-          >
-            <div class="RestoCard-imageBox">
+          <h2 class="RestaurantsList-title">Restaurants</h2>
+          <div id="laPaletteDuGout" class="RestaurantsList-item RestoCard">
+            <a href="./pages/resto1.html" class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
                 src="./images/restaurants/resto_1.jpg"
                 alt="plat du restaurant la palette du gout"
               />
               <div class="RestoCard-imageBox-sticker">Nouveau</div>
-            </div>
+            </a>
             <div class="RestoCard-infoBox">
-              <span class="RestoCard-infoBox-title">La palette du goût</span>
-              <span class="RestoCard-infoBox-location">Ménilmontant</span>
+              <a href="./pages/resto1.html" class="RestoCard-infoBox-title"
+                >La palette du goût</a
+              >
+              <a href="./pages/resto1.html" class="RestoCard-infoBox-location"
+                >Ménilmontant</a
+              >
               <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like1" />
                 <label class="Like-button" for="like1">
-                  <img src="./images/buttons/like-unchecked.png" alt="not favorited">
-                  <img src="./images/buttons/like-checked.png" alt="favorited">
+                  <img
+                    src="./images/buttons/like-unchecked.png"
+                    alt="not favorited"
+                  />
+                  <img
+                    src="./images/buttons/like-checked.png"
+                    alt="favorited"
+                  />
                 </label>
               </div>
             </div>
-          </a>
-          <a
-            id="laNoteEnchantee"
-            href="./pages/resto2.html"
-            class="RestaurantsList-item RestoCard"
-          >
-            <div class="RestoCard-imageBox">
+          </div>
+          <div id="laNoteEnchantee" class="RestaurantsList-item RestoCard">
+            <a href="./pages/resto2.html" class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
                 src="./images/restaurants/resto_2.jpg"
                 alt="plat du restaurant la note enchantée"
               />
               <div class="RestoCard-imageBox-sticker">Nouveau</div>
-            </div>
+            </a>
             <div class="RestoCard-infoBox">
-              <span class="RestoCard-infoBox-title">La note enchantée</span>
-              <span class="RestoCard-infoBox-location">Charonne</span>
+              <a href="./pages/resto2.html" class="RestoCard-infoBox-title"
+                >La note enchantée</a
+              >
+              <a href="./pages/resto2.html" class="RestoCard-infoBox-location"
+                >Charonne</a
+              >
               <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like2" />
                 <label class="Like-button" for="like2">
-                  <img src="./images/buttons/like-unchecked.png" alt="not favorited">
-                  <img src="./images/buttons/like-checked.png" alt="favorited">
+                  <img
+                    src="./images/buttons/like-unchecked.png"
+                    alt="not favorited"
+                  />
+                  <img
+                    src="./images/buttons/like-checked.png"
+                    alt="favorited"
+                  />
                 </label>
               </div>
             </div>
-          </a>
-          <a
-            id="aLaFrancaise"
-            href="./pages/resto3.html"
-            class="RestaurantsList-item RestoCard"
-          >
-            <div class="RestoCard-imageBox">
+          </div>
+          <div id="aLaFrancaise" class="RestaurantsList-item RestoCard">
+            <a href="./pages/resto3.html" class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
                 src="./images/restaurants/resto_3.jpg"
                 alt="plat du restaurant À la française"
               />
-            </div>
+            </a>
             <div class="RestoCard-infoBox">
-              <span class="RestoCard-infoBox-title">À la française</span>
-              <span class="RestoCard-infoBox-location">Cité Rouge</span>
+              <a href="./pages/resto3.html" class="RestoCard-infoBox-title"
+                >À la française</a
+              >
+              <a href="./pages/resto3.html" class="RestoCard-infoBox-location"
+                >Cité Rouge</a
+              >
               <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like3" />
                 <label class="Like-button" for="like3">
-                  <img src="./images/buttons/like-unchecked.png" alt="not favorited">
-                  <img src="./images/buttons/like-checked.png" alt="favorited">
+                  <img
+                    src="./images/buttons/like-unchecked.png"
+                    alt="not favorited"
+                  />
+                  <img
+                    src="./images/buttons/like-checked.png"
+                    alt="favorited"
+                  />
                 </label>
               </div>
             </div>
-          </a>
-          <a
-            id="leDeliceDesSens"
-            href="./pages/resto4.html"
-            class="RestaurantsList-item RestoCard"
-          >
-            <div class="RestoCard-imageBox">
+          </div>
+          <div id="leDeliceDesSens" class="RestaurantsList-item RestoCard">
+            <a href="./pages/resto4.html" class="RestoCard-imageBox">
               <img
                 class="RestoCard-imageBox-image"
                 src="./images/restaurants/resto_4.jpg"
                 alt="plat du restaurant Le délice des sens"
               />
-            </div>
+            </a>
             <div class="RestoCard-infoBox">
-              <span class="RestoCard-infoBox-title">Le délice des sens</span>
-              <span class="RestoCard-infoBox-location">Folie-Méricourt</span>
+              <a href="./pages/resto4.html" class="RestoCard-infoBox-title"
+                >Le délice des sens</a
+              >
+              <a href="./pages/resto4.html" class="RestoCard-infoBox-location"
+                >Folie-Méricourt</a
+              >
               <div class="RestoCard-infoBox-like Like">
                 <input type="checkbox" id="like4" />
                 <label class="Like-button" for="like4">
-                  <img src="./images/buttons/like-unchecked.png" alt="not favorited">
-                  <img src="./images/buttons/like-checked.png" alt="favorited">
+                  <img
+                    src="./images/buttons/like-unchecked.png"
+                    alt="not favorited"
+                  />
+                  <img
+                    src="./images/buttons/like-checked.png"
+                    alt="favorited"
+                  />
                 </label>
               </div>
             </div>
-          </a>
+          </div>
         </section>
       </main>
       <footer>
@@ -203,9 +230,9 @@
           <div class="footer-list-block">
             <span class="footer-list-block-item">Mentions légales</span>
             <a
-            href="mailto:toto@toto.com?subject=Contact"
-            class="footer-list-block-item"
-            >Contact</a
+              href="mailto:toto@toto.com?subject=Contact"
+              class="footer-list-block-item"
+              >Contact</a
             >
           </div>
         </div>

@@ -75,6 +75,10 @@ header {
 .Like > input:checked + .Like-button img:nth-child(2), .Like > input:hover + .Like-button img:nth-child(2) {
   opacity: 1;
 }
+.Like-hiddenInput {
+  height: 0;
+  width: 0;
+}
 
 .Course {
   display: flex;
@@ -92,6 +96,18 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   justify-content: space-between;
+  opacity: 0;
+}
+.Course-item-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .Course-item-texts {
   white-space: nowrap;
@@ -134,15 +150,187 @@ header {
 .Course > input {
   display: none;
 }
-.Course > input[type=checkbox]:checked + label > .Course-item {
+.Course > input[type=checkbox]:checked + .Course-item,
+.Course :hover {
   padding-right: 70px;
   transition: all 0.5s;
 }
-.Course > input[type=checkbox]:checked + label > .Course-item > .Course-item-check {
+.Course > input[type=checkbox]:checked + .Course-item .Course-item-check,
+.Course :hover .Course-item-check {
   right: 0;
   transition: all 0.5s;
 }
 
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(1) {
+  animation: fadeInFromTop 0.5s ease-in-out 0.7s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(2) {
+  animation: fadeInFromTop 0.5s ease-in-out 0.9s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(3) {
+  animation: fadeInFromTop 0.5s ease-in-out 1.1s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(4) {
+  animation: fadeInFromTop 0.5s ease-in-out 1.3s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(5) {
+  animation: fadeInFromTop 0.5s ease-in-out 1.5s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(6) {
+  animation: fadeInFromTop 0.5s ease-in-out 1.7s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(7) {
+  animation: fadeInFromTop 0.5s ease-in-out 1.9s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(8) {
+  animation: fadeInFromTop 0.5s ease-in-out 2.1s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(9) {
+  animation: fadeInFromTop 0.5s ease-in-out 2.3s forwards;
+}
+
+.RestoMenu-course:nth-child(1) .Course-item:nth-child(10) {
+  animation: fadeInFromTop 0.5s ease-in-out 2.5s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(1) {
+  animation: fadeInFromTop 0.5s ease-in-out 3.2s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(2) {
+  animation: fadeInFromTop 0.5s ease-in-out 3.4s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(3) {
+  animation: fadeInFromTop 0.5s ease-in-out 3.6s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(4) {
+  animation: fadeInFromTop 0.5s ease-in-out 3.8s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(5) {
+  animation: fadeInFromTop 0.5s ease-in-out 4s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(6) {
+  animation: fadeInFromTop 0.5s ease-in-out 4.2s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(7) {
+  animation: fadeInFromTop 0.5s ease-in-out 4.4s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(8) {
+  animation: fadeInFromTop 0.5s ease-in-out 4.6s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(9) {
+  animation: fadeInFromTop 0.5s ease-in-out 4.8s forwards;
+}
+
+.RestoMenu-course:nth-child(2) .Course-item:nth-child(10) {
+  animation: fadeInFromTop 0.5s ease-in-out 5s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(1) {
+  animation: fadeInFromTop 0.5s ease-in-out 5.7s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(2) {
+  animation: fadeInFromTop 0.5s ease-in-out 5.9s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(3) {
+  animation: fadeInFromTop 0.5s ease-in-out 6.1s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(4) {
+  animation: fadeInFromTop 0.5s ease-in-out 6.3s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(5) {
+  animation: fadeInFromTop 0.5s ease-in-out 6.5s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(6) {
+  animation: fadeInFromTop 0.5s ease-in-out 6.7s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(7) {
+  animation: fadeInFromTop 0.5s ease-in-out 6.9s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(8) {
+  animation: fadeInFromTop 0.5s ease-in-out 7.1s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(9) {
+  animation: fadeInFromTop 0.5s ease-in-out 7.3s forwards;
+}
+
+.RestoMenu-course:nth-child(3) .Course-item:nth-child(10) {
+  animation: fadeInFromTop 0.5s ease-in-out 7.5s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(1) {
+  animation: fadeInFromTop 0.5s ease-in-out 8.2s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(2) {
+  animation: fadeInFromTop 0.5s ease-in-out 8.4s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(3) {
+  animation: fadeInFromTop 0.5s ease-in-out 8.6s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(4) {
+  animation: fadeInFromTop 0.5s ease-in-out 8.8s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(5) {
+  animation: fadeInFromTop 0.5s ease-in-out 9s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(6) {
+  animation: fadeInFromTop 0.5s ease-in-out 9.2s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(7) {
+  animation: fadeInFromTop 0.5s ease-in-out 9.4s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(8) {
+  animation: fadeInFromTop 0.5s ease-in-out 9.6s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(9) {
+  animation: fadeInFromTop 0.5s ease-in-out 9.8s forwards;
+}
+
+.RestoMenu-course:nth-child(4) .Course-item:nth-child(10) {
+  animation: fadeInFromTop 0.5s ease-in-out 10s forwards;
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .RestoBanner {
   display: flex;
   flex-direction: column;
@@ -209,11 +397,7 @@ header {
 .RestoMenu-course-list {
   width: 100%;
   margin-bottom: 30px;
-}
-.RestoMenu-course-list-label {
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  position: relative;
 }
 .RestoMenu-order {
   width: 100%;
@@ -222,139 +406,19 @@ header {
 }
 
 .RestoMenu-course:nth-child(1) .RestoMenu-course-title {
-  animation: fadeInFromLeft 0.5s ease-in-out 0s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(1) {
-  animation: fadeInFromTop 0.5s ease-in-out 0.7s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(2) {
-  animation: fadeInFromTop 0.5s ease-in-out 0.9s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(3) {
-  animation: fadeInFromTop 0.5s ease-in-out 1.1s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(4) {
-  animation: fadeInFromTop 0.5s ease-in-out 1.3s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(5) {
-  animation: fadeInFromTop 0.5s ease-in-out 1.5s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(6) {
-  animation: fadeInFromTop 0.5s ease-in-out 1.7s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(7) {
-  animation: fadeInFromTop 0.5s ease-in-out 1.9s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(8) {
-  animation: fadeInFromTop 0.5s ease-in-out 2.1s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(9) {
-  animation: fadeInFromTop 0.5s ease-in-out 2.3s forwards, expand 0.5s ease-in-out 0s forwards;
-}
-.RestoMenu-course:nth-child(1) .RestoMenu-course-list-label:nth-child(10) {
-  animation: fadeInFromTop 0.5s ease-in-out 2.5s forwards, expand 0.5s ease-in-out 0s forwards;
+  animation: fadeInFromLeft 0.5s ease-in-out 0s forwards;
 }
 
 .RestoMenu-course:nth-child(2) .RestoMenu-course-title {
-  animation: fadeInFromLeft 0.5s ease-in-out 2.5s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(1) {
-  animation: fadeInFromTop 0.5s ease-in-out 3.2s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(2) {
-  animation: fadeInFromTop 0.5s ease-in-out 3.4s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(3) {
-  animation: fadeInFromTop 0.5s ease-in-out 3.6s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(4) {
-  animation: fadeInFromTop 0.5s ease-in-out 3.8s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(5) {
-  animation: fadeInFromTop 0.5s ease-in-out 4s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(6) {
-  animation: fadeInFromTop 0.5s ease-in-out 4.2s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(7) {
-  animation: fadeInFromTop 0.5s ease-in-out 4.4s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(8) {
-  animation: fadeInFromTop 0.5s ease-in-out 4.6s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(9) {
-  animation: fadeInFromTop 0.5s ease-in-out 4.8s forwards, expand 0.5s ease-in-out 2.5s forwards;
-}
-.RestoMenu-course:nth-child(2) .RestoMenu-course-list-label:nth-child(10) {
-  animation: fadeInFromTop 0.5s ease-in-out 5s forwards, expand 0.5s ease-in-out 2.5s forwards;
+  animation: fadeInFromLeft 0.5s ease-in-out 2.5s forwards;
 }
 
 .RestoMenu-course:nth-child(3) .RestoMenu-course-title {
-  animation: fadeInFromLeft 0.5s ease-in-out 5s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(1) {
-  animation: fadeInFromTop 0.5s ease-in-out 5.7s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(2) {
-  animation: fadeInFromTop 0.5s ease-in-out 5.9s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(3) {
-  animation: fadeInFromTop 0.5s ease-in-out 6.1s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(4) {
-  animation: fadeInFromTop 0.5s ease-in-out 6.3s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(5) {
-  animation: fadeInFromTop 0.5s ease-in-out 6.5s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(6) {
-  animation: fadeInFromTop 0.5s ease-in-out 6.7s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(7) {
-  animation: fadeInFromTop 0.5s ease-in-out 6.9s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(8) {
-  animation: fadeInFromTop 0.5s ease-in-out 7.1s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(9) {
-  animation: fadeInFromTop 0.5s ease-in-out 7.3s forwards, expand 0.5s ease-in-out 5s forwards;
-}
-.RestoMenu-course:nth-child(3) .RestoMenu-course-list-label:nth-child(10) {
-  animation: fadeInFromTop 0.5s ease-in-out 7.5s forwards, expand 0.5s ease-in-out 5s forwards;
+  animation: fadeInFromLeft 0.5s ease-in-out 5s forwards;
 }
 
 .RestoMenu-course:nth-child(4) .RestoMenu-course-title {
-  animation: fadeInFromLeft 0.5s ease-in-out 7.5s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(1) {
-  animation: fadeInFromTop 0.5s ease-in-out 8.2s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(2) {
-  animation: fadeInFromTop 0.5s ease-in-out 8.4s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(3) {
-  animation: fadeInFromTop 0.5s ease-in-out 8.6s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(4) {
-  animation: fadeInFromTop 0.5s ease-in-out 8.8s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(5) {
-  animation: fadeInFromTop 0.5s ease-in-out 9s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(6) {
-  animation: fadeInFromTop 0.5s ease-in-out 9.2s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(7) {
-  animation: fadeInFromTop 0.5s ease-in-out 9.4s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(8) {
-  animation: fadeInFromTop 0.5s ease-in-out 9.6s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(9) {
-  animation: fadeInFromTop 0.5s ease-in-out 9.8s forwards, expand 0.5s ease-in-out 7.5s forwards;
-}
-.RestoMenu-course:nth-child(4) .RestoMenu-course-list-label:nth-child(10) {
-  animation: fadeInFromTop 0.5s ease-in-out 10s forwards, expand 0.5s ease-in-out 7.5s forwards;
+  animation: fadeInFromLeft 0.5s ease-in-out 7.5s forwards;
 }
 
 @keyframes fadeInFromLeft {
@@ -365,24 +429,6 @@ header {
   100% {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-@keyframes fadeInFromTop {
-  0% {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes expand {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
   }
 }
 @media screen and (min-width: 576px) {
