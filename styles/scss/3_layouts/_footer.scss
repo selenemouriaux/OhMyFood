@@ -13,21 +13,52 @@ footer {
   @include flexCol;
   justify-content: start;
   align-items: start;
-  &-line {
-    display: flex;
-    width: 100%;
-    &-icon {
-      display: inline-block;
-      width: 30px;
-    }
+  &-block {
+    @include flexCol;
     &-item {
-      margin-bottom: 8px;
-      font-weight: 400;
-      font-size: 16px;
+      @include typo(400, 16);
+      margin-bottom: 4px;
+      display: flex;
+      width: 100%;
     }
   }
 }
 
 .bold {
   font-weight: 500;
+}
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+
+///////////////////////////////////////////////////////////////
+/////////////////////// BREAKPOINTS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $breakpoint_desktop) {
+  footer {
+    @include flexRow;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: end;
+    .footer-list {
+      @include flexRow;
+      &-block {
+        @include flexRow;
+        gap: 15px;
+        margin-left: 40px;
+        &-item {
+          width: auto;
+        }
+      }
+    }
+    > img {
+      margin: 20px 20px 5px 30px;
+    }
+  }
+  .icon {
+    width: 25px;
+  }
 }

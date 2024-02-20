@@ -22,6 +22,12 @@ a {
   position: relative;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
 .logo {
   margin: 20px 0 10px 0;
   width: 200px;

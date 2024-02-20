@@ -22,6 +22,12 @@ a {
   position: relative;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
 .logo {
   margin: 20px 0 10px 0;
   width: 200px;
@@ -55,7 +61,7 @@ header {
   height: 100vh;
   background-color: rgba(17, 2, 26, 0.8);
   z-index: 10;
-  animation: fadeout 1s 2s forwards;
+  animation: fadeout 1s 0.2s forwards;
 }
 .Loader-plate {
   position: absolute;
@@ -184,7 +190,7 @@ header {
 }
 .Loader + .wrapper * {
   filter: blur(5px);
-  animation: resetBlur 1s 2s forwards;
+  animation: resetBlur 1s 0.2s forwards;
 }
 
 @keyframes grabbing {
@@ -313,7 +319,9 @@ header {
   flex-direction: row;
   margin: 30px 15px 45px 15px;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  align-self: center;
+  width: unset;
+  max-width: 1000px;
 }
 .Introduction-tutorial-title {
   text-align: start;
@@ -328,6 +336,21 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 576px) {
+  .Introduction-tutorial {
+    margin: 0 10vw 45px 10vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .Introduction-tutorial {
+    width: calc(100% - 30px);
+    margin: 30px 15px 45px 15px;
+    justify-content: space-between;
+  }
+  .Introduction-tutorial-stepCard {
+    width: auto;
+  }
+}
 .Like {
   position: relative;
   width: 22px;
@@ -352,15 +375,17 @@ header {
 }
 
 .RestaurantsList {
+  max-width: 1000px;
+  margin: 0 15px 30px 15px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 45px 15px;
-  background-color: rgb(246, 246, 246);
+  justify-content: unset;
 }
 .RestaurantsList-title {
+  margin-top: 20px;
   font-weight: 700;
   font-size: 24px;
+  width: 100%;
 }
 .RestaurantsList-item {
   display: flex;
@@ -368,13 +393,46 @@ header {
   background-color: white;
   border-radius: 20px;
   height: 250px;
+  max-width: unset;
+}
+.RestaurantsList::before {
+  content: "";
+  background-color: rgb(246, 246, 246);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50vw;
+  right: -50vw;
 }
 
+@media screen and (min-width: 576px) {
+  .RestaurantsList {
+    margin: 0 10vw 45px 10vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .RestaurantsList {
+    margin: 0 15px 45px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    flex-wrap: wrap;
+  }
+  .RestaurantsList-title {
+    width: 100%;
+  }
+  .RestaurantsList-item {
+    width: 47%;
+  }
+}
 .RestoCard {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
 }
 .RestoCard-imageBox {
   height: 175px;
@@ -437,20 +495,53 @@ footer {
   justify-content: start;
   align-items: start;
 }
-.footer-list-line {
+.footer-list-block {
   display: flex;
-  width: 100%;
+  flex-direction: column;
 }
-.footer-list-line-icon {
-  display: inline-block;
-  width: 30px;
-}
-.footer-list-line-item {
-  margin-bottom: 8px;
+.footer-list-block-item {
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 4px;
+  display: flex;
+  width: 100%;
 }
 
 .bold {
   font-weight: 500;
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+
+@media screen and (min-width: 900px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: end;
+  }
+  footer .footer-list {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .footer-list-block {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 40px;
+  }
+  footer .footer-list-block-item {
+    width: auto;
+  }
+  footer > img {
+    margin: 20px 20px 5px 30px;
+  }
+  .icon {
+    width: 25px;
+  }
 }

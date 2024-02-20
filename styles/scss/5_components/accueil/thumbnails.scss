@@ -2,6 +2,9 @@
   @include flexCol;
   overflow: hidden;
   position: relative;
+  // Shadow added for visibility (personal preference), not supposed to be.
+  box-shadow: $shadowBadge;
+  margin: 20px 0;
   &-imageBox {
     height: 175px;
     width: 100%;

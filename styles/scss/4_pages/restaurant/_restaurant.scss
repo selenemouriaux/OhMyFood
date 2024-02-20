@@ -1,6 +1,7 @@
 .RestoBanner {
   @include flexCol;
   position: relative;
+  align-items: center;
   height: 300px;
   width: 100%;
   &-image {
@@ -18,14 +19,15 @@
     background-color: $background;
     border-radius: 25px 25px 0 0;
     align-items: center;
-    padding: 0 20px;
+    justify-content: unset;
+    padding: 0 60px 0 20px;
     &-name {
       font-family: $titleFont;
       font-size: 28px;
     }
     &-like {
       position: absolute;
-      right: 30px;
+      right: 25px;
     }
   }
 }
@@ -78,16 +80,18 @@
 @for $i from 1 through 4 {
   .RestoMenu-course:nth-child(#{$i}) {
     .RestoMenu-course-title {
-      animation: fadeInFromLeft 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards;
+      animation: fadeInFromLeft 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards,
+        expand 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards;
     }
     // Loop for options of current course (innerloop)
     @for $j from 1 through 10 {
       .RestoMenu-course-list-label:nth-child(#{$j}) {
         animation: fadeInFromTop
-          0.5s
-          ease-in-out
-          ($i * 2.5s - 2s + $j * 0.2s)
-          forwards;
+            0.5s
+            ease-in-out
+            ($i * 2.5s - 2s + $j * 0.2s)
+            forwards,
+          expand 0.5s ease-in-out ($i * 2.5s - 2.5s) forwards;
       }
     }
   }
@@ -111,5 +115,63 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes expand {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+///////////////////////////////////////////////////////////////
+/////////////////////// BREAKPOINTS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $breakpoint_tablet_M) {
+  .RestoBanner {
+    &-image {
+      height: 250px;
+    }
+    &-nameBox {
+      position: relative;
+      top: -25px;
+      width: 556px;
+      padding: 50px 40px;
+      justify-content: center;
+      &-like {
+        position: relative;
+        margin-left: 50px;
+      }
+    }
+  }
+  .RestoMenu {
+    width: 556px;
+    align-self: center;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: $breakpoint_desktop) {
+  .RestoBanner {
+    &-image {
+      height: 250px;
+    }
+    &-nameBox {
+      position: relative;
+      top: -25px;
+      width: 80%;
+      max-width: 1000px;
+      padding: 50px 40px;
+    }
+  }
+  .RestoMenu {
+    width: 80%;
+    max-width: 1000px;
+    align-self: center;
+    margin-top: 50px;
+    padding: 30px 10vw;
   }
 }

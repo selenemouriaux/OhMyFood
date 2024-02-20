@@ -40,7 +40,9 @@
     @include flexRow;
     margin: 30px 15px 45px 15px;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    align-self: center;
+    width: unset;
+    max-width: 1000px;
     &-title {
       text-align: start;
       width: 100%;
@@ -51,6 +53,26 @@
       margin: 0 0 20px 12px;
       width: 100%;
       box-shadow: $shadowInstructions;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////
+/////////////////////// BREAKPOINTS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $breakpoint_tablet_M) {
+  .Introduction-tutorial {
+    margin: 0 10vw 45px 10vw;
+  }
+}
+@media screen and (min-width: $breakpoint_desktop) {
+  .Introduction-tutorial {
+    width: calc(100% - 30px);
+    margin: 30px 15px 45px 15px;
+    justify-content: space-between;
+    &-stepCard {
+      width: auto;
     }
   }
 }
