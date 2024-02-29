@@ -60,7 +60,7 @@ header {
   height: 100vh;
   background-color: rgba(17, 2, 26, 0.8);
   z-index: 10;
-  animation: fadeout 0.1s 0.2s forwards;
+  animation: fadeout 1s 2s forwards;
 }
 .Loader-plate {
   position: absolute;
@@ -189,7 +189,7 @@ header {
 }
 .Loader + .wrapper * {
   filter: blur(5px);
-  animation: resetBlur 0.1s 0.2s forwards;
+  animation: resetBlur 1s 2s forwards;
 }
 
 @keyframes grabbing {
