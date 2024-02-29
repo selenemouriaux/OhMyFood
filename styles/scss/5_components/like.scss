@@ -2,26 +2,55 @@
   position: relative;
   width: 22px;
   height: 21px;
-  & img {
+  & .fa-heart {
+    filter: blur(0px);
+    transform: scale(0.9, 1);
+    font-size: 22px;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
   }
-  & > input {
-    width: 0;
-    height: 0;
-    &:not(:checked) + .Like-button img:first-child {
-      opacity: 1;
+  & .far {
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+    &:hover {
+      opacity: 0;
+      + .fas {
+        opacity: 1;
+        animation: heart-full 0.4s linear both;
+      }
     }
-    &:checked + .Like-button img:nth-child(2),
-    &:hover + .Like-button img:nth-child(2) {
-      opacity: 1;
-    }
+  }
+  & .fas {
+    background: linear-gradient(63deg, $secondary 0%, $primary 100%);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    z-index: 1;
+    transform-origin: 50% bottom;
+    transform: scale(1);
+    animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
   }
   &-hiddenInput {
     height: 0;
     width: 0;
+  }
+}
+
+@keyframes heart-full {
+  0% {
+    transform: scale(0, 0);
+  }
+  80% {
+    transform: scale(0.9, 1);
+  }
+  90% {
+    transform: scale(1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 1);
   }
 }

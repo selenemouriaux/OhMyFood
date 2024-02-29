@@ -18,8 +18,14 @@
   }
   &-icon {
     width: 40px;
+    color: $greyTint;
   }
   &-step {
     @include typo(500, 16);
+  }
+  &:hover {
+    .StepCard-icon {
+      color: $primary;
+    }
   }
 }

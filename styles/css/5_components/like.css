@@ -1,26 +1,17 @@
-.Like {
-  position: relative;
-  width: 22px;
-  height: 21px;
-}
-.Like img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.Like > input {
-  width: 0;
-  height: 0;
-}
-.Like > input:not(:checked) + .Like-button img:first-child {
-  opacity: 1;
-}
-.Like > input:checked + .Like-button img:nth-child(2), .Like > input:hover + .Like-button img:nth-child(2) {
-  opacity: 1;
-}
-.Like-hiddenInput {
-  height: 0;
-  width: 0;
+/* Error: Undefined variable.
+ *    ,
+ * 26 |     background: linear-gradient(63deg, $secondary 0%, $primary 100%);
+ *    |                                        ^^^^^^^^^^
+ *    '
+ *   styles\scss\5_components\like.scss 26:40  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 26 \2502      background: linear-gradient(63deg, $secondary 0%, $primary 100%);\d\a    \2502                                         ^^^^^^^^^^\a    \2575 \a   styles\\scss\\5_components\\like.scss 26:40  root stylesheet";
 }

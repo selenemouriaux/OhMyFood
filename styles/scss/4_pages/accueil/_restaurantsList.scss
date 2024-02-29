@@ -3,6 +3,7 @@
   margin: 0 15px 30px 15px;
   @include flexCol;
   justify-content: unset;
+  overflow-x: hidden;
   &-title {
     margin-top: 20px;
     @include typo(700, 24);

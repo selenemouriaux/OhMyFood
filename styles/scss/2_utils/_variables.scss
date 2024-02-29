@@ -10,7 +10,8 @@ $titleFont: "Shrikhand", serif;
 ///////////////////////////////////////////////////////////////
 
 $grey: rgba(53, 53, 53, 1);
-$grey2: rgba(234, 234, 234, 1);
+// $grey2: rgba(234, 234, 234, 1);
+$grey2: #f6f6f6;
 $white: white;
 $background: rgba(246, 246, 246, 1);
 $buttonGradient: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
@@ -20,6 +21,7 @@ $buttonGradienthover: linear-gradient(
   #ff79da 110.74%
 );
 $primary: rgba(147, 86, 220, 1);
+$secondary: rgba(255, 121, 218, 1);
 $greyTint: rgba(126, 126, 126, 1);
 $green: #99e2d0;
 $greenFont: #008766;
